@@ -26,4 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - actions
+
+- (IBAction)sliderValueDidChanged:(UISlider *)sender
+{
+  [StatisticsSDK eventWithCategory:@"Second"
+                            action:@"Slider"
+                             label:@"ValueChange"
+                             value:[NSNumber numberWithFloat:sender.value]];
+}
+
 @end

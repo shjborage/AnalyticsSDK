@@ -40,4 +40,12 @@
   [StatisticsSDK endLogView:NSStringFromClass([self class])];
 }
 
+#pragma mark - actions
+
+- (IBAction)btnDidPressed:(id)sender
+{
+  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
+  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
+}
+
 @end

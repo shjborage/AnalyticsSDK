@@ -40,6 +40,7 @@
                                    [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD]];
   NSMutableDictionary *umeng = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kStatisticsUmeng]];
   [umeng setValue:@"YES" forKey:kIsEnable];
+  [allItems setObject:umeng forKey:kStatisticsUmeng];
   [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kStatisticsUD];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -51,6 +52,7 @@
                                    [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD]];
   NSMutableDictionary *google = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kStatisticsGoogle]];
   [google setValue:@"YES" forKey:kIsEnable];
+  [allItems setObject:google forKey:kStatisticsGoogle];
   [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kStatisticsUD];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -158,6 +160,67 @@
   
   if ([self isEnableGoogle]) {
     ;
+  }
+}
+
+/*
+ events
+ */
+
+#pragma mark - Events
+
++ (void)eventWithCategory:(NSString *)category
+                   action:(NSString *)action
+{
+  [self eventWithCategory:category action:action label:@""];
+}
+
++ (void)eventWithCategory:(NSString *)category
+                   action:(NSString *)action
+                    label:(NSString *)label
+{
+  [self eventWithCategory:category action:action label:label value:nil];
+}
+
++ (void)eventWithCategory:(NSString *)category
+                   action:(NSString *)action
+                    label:(NSString *)label
+                    value:(id)value
+{
+  if ([self isEnableUmeng]) {
+    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
+    [MobClick event:eventId label:label];
+    if (value)
+      [MobClick event:eventId attributes:@{@"value": value}];
+  }
+  
+  if ([self isEnableGoogle]) {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
+                                                          action:action
+                                                           label:label
+                                                           value:value] build]];
+  }
+}
+
++ (void)eventWithCategory:(NSString *)category
+                   action:(NSString *)action
+                    label:(NSString *)label
+                     time:(NSTimeInterval)intervalMillis
+{
+  if ([self isEnableUmeng]) {
+    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
+    [MobClick event:eventId label:label durations:(int)intervalMillis];
+  }
+  
+  if ([self isEnableGoogle]) {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createTimingWithCategory:category
+                                                         interval:[NSNumber numberWithFloat:intervalMillis]
+                                                             name:action
+                                                            label:label] build]];
   }
 }
 
