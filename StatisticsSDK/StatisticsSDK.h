@@ -7,18 +7,21 @@
 //
 
 /*
- Support:
- 1. [Umeng](http://dev.umeng.com/analytics/ios/ )
-  a. Default Channel : App Store
+ ###Support:
+ ####1. [Umeng](http://dev.umeng.com/analytics/ios/ )
  
- 2. [GoogleAnalytics](http://developers.google.com/analytics/devguides/collection/ios/v3/ )
-  a. Not support multi trackers
-  b. Default Channel : App Store
-  c. Default dispatch time interval 20 seconds
-  d. Default Automatically send uncaught exceptions to Google Analytics
+ *	1, Default Channel : App Store
  
- Notice:
-  1. If you connnect one item, and then you remove your connnection, there is an warnning.
+ ####2. [GoogleAnalytics](http://developers.google.com/analytics/devguides/collection/ios/v3/ )
+ 
+ *	1, Not support multi trackers
+ *	2, Default Channel : App Store
+ *	3, Default dispatch time interval 20 seconds
+ *	4, Default Automatically send uncaught exceptions to Google Analytics
+ 
+ ###Notice:
+ 
+ *	1. If you connnect one item, and then you remove your connnection, there is an warnning.
  */
 
 #define kDefaultChannel                 @"App Store"
