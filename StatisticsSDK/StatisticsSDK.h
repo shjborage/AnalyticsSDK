@@ -32,6 +32,7 @@
 #import "MobClick.h"
 #import "GAI.h"
 #import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface StatisticsSDK : NSObject
 
@@ -59,8 +60,10 @@
 + (void)setLogEnabled:(BOOL)isEnable;
 
 /*
- basic
+ basic page view
  */
++ (void)beginLogView:(NSString *)viewName;
++ (void)endLogView:(NSString *)viewName;
 
 /*
  events

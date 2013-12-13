@@ -122,15 +122,42 @@
 // Enable debug log.
 + (void)setLogEnabled:(BOOL)isEnable
 {
-  if ([self isEnableUmeng]) {
+  if ([self isEnableUmeng])
     [MobClick setLogEnabled:isEnable];
-  }
   
   if ([self isEnableGoogle]) {
     if (isEnable)
       [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     else
       [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
+  }
+}
+
+/*
+ basic page view
+ */
+
+#pragma mark - Basic page view
+
++ (void)beginLogView:(NSString *)viewName
+{
+  if ([self isEnableUmeng])
+    [MobClick beginLogPageView:viewName];
+  
+  if ([self isEnableGoogle]) {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:viewName];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+  }
+}
+
++ (void)endLogView:(NSString *)viewName
+{
+  if ([self isEnableUmeng])
+    [MobClick endLogPageView:viewName];
+  
+  if ([self isEnableGoogle]) {
+    ;
   }
 }
 

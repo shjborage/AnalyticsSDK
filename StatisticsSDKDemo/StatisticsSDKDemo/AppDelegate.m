@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "StatisticsSDK.h"
 #import "AnalyticsHeader.h"
 
 @implementation AppDelegate
