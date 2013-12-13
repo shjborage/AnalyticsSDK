@@ -26,18 +26,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-  [super viewWillAppear:animated];
-  
-  [StatisticsSDK beginLogView:NSStringFromClass([self class])];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-  [super viewWillDisappear:animated];
-  
-  [StatisticsSDK endLogView:NSStringFromClass([self class])];
-}
-
 @end

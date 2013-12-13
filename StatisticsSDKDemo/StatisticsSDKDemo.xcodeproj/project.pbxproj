@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A024AC10185B6B500074E39D /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A024AC0F185B6B500074E39D /* StatisticsViewController.m */; };
 		A052E1771859A586009CB88F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1761859A586009CB88F /* Foundation.framework */; };
 		A052E1791859A586009CB88F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1781859A586009CB88F /* CoreGraphics.framework */; };
 		A052E17B1859A586009CB88F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E17A1859A586009CB88F /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A024AC0E185B6B500074E39D /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		A024AC0F185B6B500074E39D /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		A052E1731859A586009CB88F /* StatisticsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatisticsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A052E1761859A586009CB88F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A052E1781859A586009CB88F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +238,8 @@
 		A0AEB5BD185AA5DB00D18DD5 /* Extend */ = {
 			isa = PBXGroup;
 			children = (
+				A024AC0E185B6B500074E39D /* StatisticsViewController.h */,
+				A024AC0F185B6B500074E39D /* StatisticsViewController.m */,
 			);
 			path = Extend;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				A052E1901859A586009CB88F /* SecondViewController.m in Sources */,
 				A052E1871859A586009CB88F /* AppDelegate.m in Sources */,
 				A052E18D1859A586009CB88F /* FirstViewController.m in Sources */,
+				A024AC10185B6B500074E39D /* StatisticsViewController.m in Sources */,
 				A052E1831859A586009CB88F /* main.m in Sources */,
 				A052E1BE1859AB81009CB88F /* StatisticsSDK.m in Sources */,
 			);

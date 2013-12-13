@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StatisticsViewController.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : StatisticsViewController
 
 @end
