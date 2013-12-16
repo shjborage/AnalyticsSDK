@@ -3,7 +3,14 @@ StatisticsSDK
 
 To be a full statistics SDK for all iOS statistics tools. For example, UMeng, 百度统计,  Google Analytics
 
-###Installation(Todo CocoaPods)
+Release Note:
+
+**v0.1**
+
+Basic support Umeng, GoogleAnalytics.
+
+
+###Installation(CocoaPods)
 Add the dependency to your `Podfile`:
 
 ```ruby
@@ -31,6 +38,67 @@ Next, import the header file wherever you want to use the tab bar controller:
 
 ```objc
 #import "StatisticsSDK.h"
+```
+
+###Sample Code
+
+
+1. init StatisticsSDK
+
+```objc
+- (void)initStatisticsSDK
+{
+  [StatisticsSDK connectGoogleWithTrackingID:kAnalyticAppKeyGoogle];
+  [StatisticsSDK connectUmengWithAppKey:kAnalyticAppKeyUmeng];
+  
+  [StatisticsSDK setLogEnabled:YES];
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  // Override point for customization after application launch.
+  [self initStatisticsSDK];
+  
+  return YES;
+}
+```
+
+2. Log some view
+
+```objc
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  
+  [StatisticsSDK beginLogView:NSStringFromClass([self class])];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+  [super viewWillDisappear:animated];
+  
+  [StatisticsSDK endLogView:NSStringFromClass([self class])];
+}
+```
+
+For extend: automatic log view
+
+```objc
+#import "StatisticsViewController.h"
+
+@interface SecondViewController : StatisticsViewController
+
+@end
+```
+
+3. Events Support
+
+```objc
+- (IBAction)btnDidPressed:(id)sender
+{
+  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
+  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
+}
 ```
 
 ###Support:
