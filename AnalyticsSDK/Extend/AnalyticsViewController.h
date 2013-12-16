@@ -8,6 +8,6 @@
 
 #import "GAITrackedViewController.h"
 
-@interface StatisticsViewController : GAITrackedViewController
+@interface AnalyticsViewController : GAITrackedViewController
 
 @end

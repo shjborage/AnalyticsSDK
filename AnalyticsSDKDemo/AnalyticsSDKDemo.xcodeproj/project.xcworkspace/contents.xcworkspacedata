@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:StatisticsSDKDemo.xcodeproj">
+      location = "self:AnalyticsSDKDemo.xcodeproj">
    </FileRef>
 </Workspace>

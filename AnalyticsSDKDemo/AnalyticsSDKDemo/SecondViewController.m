@@ -1,6 +1,6 @@
 //
 //  SecondViewController.m
-//  StatisticsSDKDemo
+//  AnalyticsSDKDemo
 //
 //  Created by Eric on 12/12/13.
 //  Copyright (c) 2013 Saick. All rights reserved.
@@ -30,7 +30,7 @@
 
 - (IBAction)sliderValueDidChanged:(UISlider *)sender
 {
-  [StatisticsSDK eventWithCategory:@"Second"
+  [AnalyticsSDK eventWithCategory:@"Second"
                             action:@"Slider"
                              label:@"ValueChange"
                              value:[NSNumber numberWithFloat:sender.value]];

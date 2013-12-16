@@ -1,13 +1,13 @@
 //
 //  AnalyticsHeader.h
-//  StatisticsSDKDemo
+//  AnalyticsSDKDemo
 //
 //  Created by Eric on 12/13/13.
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
-#ifndef StatisticsSDKDemo_AnalyticsHeader_h
-#define StatisticsSDKDemo_AnalyticsHeader_h
+#ifndef AnalyticsSDKDemo_AnalyticsHeader_h
+#define AnalyticsSDKDemo_AnalyticsHeader_h
 
 #warning fill it with your key
 

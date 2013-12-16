@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  StatisticsSDKDemo
+//  AnalyticsSDKDemo
 //
 //  Created by Eric on 12/12/13.
 //  Copyright (c) 2013 Saick. All rights reserved.
@@ -13,10 +13,10 @@
 
 - (void)initStatisticsSDK
 {
-  [StatisticsSDK connectGoogleWithTrackingID:kAnalyticAppKeyGoogle];
-  [StatisticsSDK connectUmengWithAppKey:kAnalyticAppKeyUmeng];
+  [AnalyticsSDK connectGoogleWithTrackingID:kAnalyticAppKeyGoogle];
+  [AnalyticsSDK connectUmengWithAppKey:kAnalyticAppKeyUmeng];
   
-  [StatisticsSDK setLogEnabled:YES];
+  [AnalyticsSDK setLogEnabled:YES];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

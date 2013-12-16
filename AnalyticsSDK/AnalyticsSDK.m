@@ -6,29 +6,29 @@
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
-#import "StatisticsSDK.h"
+#import "AnalyticsSDK.h"
 
-#define kStatisticsUD         @"Statistics_UDKey"
-#define kStatisticsUmeng      @"Statistics_Umeng"
-#define kStatisticsGoogle     @"Statistics_Google"
+#define kAnalyticsUD         @"Analytics_UDKey"
+#define kAnalyticsUmeng      @"Analytics_Umeng"
+#define kAnalyticsGoogle     @"Analytics_Google"
 
 #define kIsEnable             @"isEnable"
 
-@interface StatisticsSDK ()
+@interface AnalyticsSDK ()
 
 @end
 
-@implementation StatisticsSDK (private)
+@implementation AnalyticsSDK (private)
 
 #pragma mark - Check isEnable statistics item
 
 + (void)initDefaultSettings
 {
-  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD];
+  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
   if (![allItems isKindOfClass:[NSDictionary class]]) {
-    allItems = @{kStatisticsUmeng:  @{kIsEnable: @"NO"},
-                 kStatisticsGoogle: @{kIsEnable: @"NO"}};
-    [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kStatisticsUD];
+    allItems = @{kAnalyticsUmeng:  @{kIsEnable: @"NO"},
+                 kAnalyticsGoogle: @{kIsEnable: @"NO"}};
+    [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kAnalyticsUD];
     [[NSUserDefaults standardUserDefaults] synchronize];
   } // If there is, use it.
 }
@@ -37,11 +37,11 @@
 {
   [self initDefaultSettings];
   NSMutableDictionary *allItems = [NSMutableDictionary dictionaryWithDictionary:
-                                   [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD]];
-  NSMutableDictionary *umeng = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kStatisticsUmeng]];
+                                   [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD]];
+  NSMutableDictionary *umeng = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kAnalyticsUmeng]];
   [umeng setValue:@"YES" forKey:kIsEnable];
-  [allItems setObject:umeng forKey:kStatisticsUmeng];
-  [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kStatisticsUD];
+  [allItems setObject:umeng forKey:kAnalyticsUmeng];
+  [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kAnalyticsUD];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -49,31 +49,31 @@
 {
   [self initDefaultSettings];
   NSMutableDictionary *allItems = [NSMutableDictionary dictionaryWithDictionary:
-                                   [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD]];
-  NSMutableDictionary *google = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kStatisticsGoogle]];
+                                   [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD]];
+  NSMutableDictionary *google = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kAnalyticsGoogle]];
   [google setValue:@"YES" forKey:kIsEnable];
-  [allItems setObject:google forKey:kStatisticsGoogle];
-  [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kStatisticsUD];
+  [allItems setObject:google forKey:kAnalyticsGoogle];
+  [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kAnalyticsUD];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (BOOL)isEnableUmeng
 {
   [self initDefaultSettings];
-  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD];
-  return [[[allItems objectForKey:kStatisticsUmeng] objectForKey:kIsEnable] boolValue];
+  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
+  return [[[allItems objectForKey:kAnalyticsUmeng] objectForKey:kIsEnable] boolValue];
 }
 
 + (BOOL)isEnableGoogle
 {
   [self initDefaultSettings];
-  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kStatisticsUD];
-  return [[[allItems objectForKey:kStatisticsGoogle] objectForKey:kIsEnable] boolValue];
+  NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
+  return [[[allItems objectForKey:kAnalyticsGoogle] objectForKey:kIsEnable] boolValue];
 }
 
 @end
 
-@implementation StatisticsSDK
+@implementation AnalyticsSDK
 
 /*
  connections

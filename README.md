@@ -1,14 +1,7 @@
-StatisticsSDK
+AnalyticsSDK
 =============
 
 To be a full statistics SDK for all iOS statistics tools. For example, UMeng, 百度统计,  Google Analytics
-
-Release Note:
-
-**v0.1**
-
-Basic support Umeng, GoogleAnalytics.
-
 
 ###Installation(CocoaPods)
 Add the dependency to your `Podfile`:
@@ -16,7 +9,7 @@ Add the dependency to your `Podfile`:
 ```ruby
 platform :ios
 
-pod 'StatisticsSDK'
+pod 'AnalyticsSDK'
 ```
 
 Run `pod install` to install the dependencies.
@@ -24,12 +17,12 @@ Run `pod install` to install the dependencies.
 Next, import the header file wherever you want to use the tab bar controller:
 
 ```objc
-#import "StatisticsSDK.h"
+#import "AnalyticsSDK.h"
 ```
 
 ###Installation(Manual)
 
-*	1, Add StatisticsSDK folder to you project.
+*	1, Add AnalyticsSDK folder to you project.
 *	2, Add linked libraries:
 	*	CoreData.framework
 	*	SystemConfiguration.framework
@@ -37,21 +30,21 @@ Next, import the header file wherever you want to use the tab bar controller:
 *	3, import the header file wherever you want to use the tab bar controller:
 
 ```objc
-#import "StatisticsSDK.h"
+#import "AnalyticsSDK.h"
 ```
 
 ###Sample Code
 
 
-1. init StatisticsSDK
+1. init AnalyticsSDK
 
 ```objc
 - (void)initStatisticsSDK
 {
-  [StatisticsSDK connectGoogleWithTrackingID:kAnalyticAppKeyGoogle];
-  [StatisticsSDK connectUmengWithAppKey:kAnalyticAppKeyUmeng];
+  [AnalyticsSDK connectGoogleWithTrackingID:kAnalyticAppKeyGoogle];
+  [AnalyticsSDK connectUmengWithAppKey:kAnalyticAppKeyUmeng];
   
-  [StatisticsSDK setLogEnabled:YES];
+  [AnalyticsSDK setLogEnabled:YES];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -70,14 +63,14 @@ Next, import the header file wherever you want to use the tab bar controller:
 {
   [super viewWillAppear:animated];
   
-  [StatisticsSDK beginLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK beginLogView:NSStringFromClass([self class])];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
   [super viewWillDisappear:animated];
   
-  [StatisticsSDK endLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK endLogView:NSStringFromClass([self class])];
 }
 ```
 
@@ -86,7 +79,7 @@ For extend: automatic log view
 ```objc
 #import "StatisticsViewController.h"
 
-@interface SecondViewController : StatisticsViewController
+@interface SecondViewController : AnalyticsViewController
 
 @end
 ```
@@ -96,8 +89,8 @@ For extend: automatic log view
 ```objc
 - (IBAction)btnDidPressed:(id)sender
 {
-  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
-  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
+  [AnalyticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
+  [AnalyticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
 }
 ```
 
@@ -117,3 +110,12 @@ For extend: automatic log view
 
 *	1, If you connect one item, and then you remove your connnection, there is an warnning.
 *	2, If you connect google analytics, **If your app uses the CoreData framework** *: responding to a notification, e.g. NSManagedObjectContextDidSaveNotification, from the Google Analytics CoreData object may result in an exception. Instead, Apple recommends filtering CoreData notifications by specifying the managed object context as a parameter to your listener. [Learn more from Apple](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/CoreDataFramework/Classes/NSManagedObjectContext_Class/NSManagedObjectContext.html).*
+
+
+## Author
+
+Eric, shjborage@gmail.com
+
+## License
+
+AnalyticsSDK is available under the MIT license. See the LICENSE file for more info.

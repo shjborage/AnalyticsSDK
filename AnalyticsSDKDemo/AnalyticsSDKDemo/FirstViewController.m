@@ -1,6 +1,6 @@
 //
 //  FirstViewController.m
-//  StatisticsSDKDemo
+//  AnalyticsSDKDemo
 //
 //  Created by Eric on 12/12/13.
 //  Copyright (c) 2013 Saick. All rights reserved.
@@ -30,22 +30,22 @@
 {
   [super viewWillAppear:animated];
   
-  [StatisticsSDK beginLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK beginLogView:NSStringFromClass([self class])];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
   [super viewWillDisappear:animated];
   
-  [StatisticsSDK endLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK endLogView:NSStringFromClass([self class])];
 }
 
 #pragma mark - actions
 
 - (IBAction)btnDidPressed:(id)sender
 {
-  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
-  [StatisticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
+  [AnalyticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" value:nil];
+  [AnalyticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
 }
 
 @end

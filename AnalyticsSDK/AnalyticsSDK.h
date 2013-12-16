@@ -39,7 +39,7 @@
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
 
-@interface StatisticsSDK : NSObject
+@interface AnalyticsSDK : NSObject
 
 /*
  connections

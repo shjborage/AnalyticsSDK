@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
-#import "StatisticsViewController.h"
-#import "StatisticsSDK.h"
+#import "AnalyticsViewController.h"
+#import "AnalyticsSDK.h"
 
-@interface StatisticsViewController ()
+@interface AnalyticsViewController ()
 
 @end
 
-@implementation StatisticsViewController
+@implementation AnalyticsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,14 +40,14 @@
 {
   [super viewWillAppear:animated];
   
-  [StatisticsSDK beginLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK beginLogView:NSStringFromClass([self class])];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
   [super viewWillDisappear:animated];
   
-  [StatisticsSDK endLogView:NSStringFromClass([self class])];
+  [AnalyticsSDK endLogView:NSStringFromClass([self class])];
 }
 
 @end
