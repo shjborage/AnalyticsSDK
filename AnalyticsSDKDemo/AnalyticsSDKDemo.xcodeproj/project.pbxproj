@@ -15,10 +15,10 @@
 		477ADD92185ED817004403AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADD88185ED817004403AB /* main.m */; };
 		477ADD93185ED817004403AB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADD8A185ED817004403AB /* SecondViewController.m */; };
 		477ADD94185ED817004403AB /* AnalyticsSDKDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 477ADD8B185ED817004403AB /* AnalyticsSDKDemo-Info.plist */; };
-		477ADDA7185ED824004403AB /* AnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADD97185ED824004403AB /* AnalyticsSDK.m */; };
-		477ADDA8185ED824004403AB /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477ADDA0185ED824004403AB /* libGoogleAnalyticsServices.a */; };
-		477ADDA9185ED824004403AB /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477ADDA2185ED824004403AB /* libMobClickLibrary.a */; };
-		477ADDAA185ED825004403AB /* AnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADDA6185ED824004403AB /* AnalyticsViewController.m */; };
+		477ADDBD185EDB01004403AB /* AnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADDAD185EDB01004403AB /* AnalyticsSDK.m */; };
+		477ADDBE185EDB01004403AB /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477ADDB6185EDB01004403AB /* libGoogleAnalyticsServices.a */; };
+		477ADDBF185EDB01004403AB /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 477ADDB8185EDB01004403AB /* libMobClickLibrary.a */; };
+		477ADDC0185EDB01004403AB /* AnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADDBC185EDB01004403AB /* AnalyticsViewController.m */; };
 		A052E1771859A586009CB88F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1761859A586009CB88F /* Foundation.framework */; };
 		A052E1791859A586009CB88F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1781859A586009CB88F /* CoreGraphics.framework */; };
 		A052E17B1859A586009CB88F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E17A1859A586009CB88F /* UIKit.framework */; };
@@ -41,19 +41,19 @@
 		477ADD8A185ED817004403AB /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		477ADD8B185ED817004403AB /* AnalyticsSDKDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AnalyticsSDKDemo-Info.plist"; sourceTree = "<group>"; };
 		477ADD8C185ED817004403AB /* AnalyticsSDKDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AnalyticsSDKDemo-Prefix.pch"; sourceTree = "<group>"; };
-		477ADD96185ED824004403AB /* AnalyticsSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsSDK.h; sourceTree = "<group>"; };
-		477ADD97185ED824004403AB /* AnalyticsSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsSDK.m; sourceTree = "<group>"; };
-		477ADD9A185ED824004403AB /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		477ADD9B185ED824004403AB /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		477ADD9C185ED824004403AB /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		477ADD9D185ED824004403AB /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		477ADD9E185ED824004403AB /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		477ADD9F185ED824004403AB /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
-		477ADDA0185ED824004403AB /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		477ADDA2185ED824004403AB /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		477ADDA3185ED824004403AB /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		477ADDA5185ED824004403AB /* AnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsViewController.h; sourceTree = "<group>"; };
-		477ADDA6185ED824004403AB /* AnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsViewController.m; sourceTree = "<group>"; };
+		477ADDAC185EDB01004403AB /* AnalyticsSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsSDK.h; sourceTree = "<group>"; };
+		477ADDAD185EDB01004403AB /* AnalyticsSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsSDK.m; sourceTree = "<group>"; };
+		477ADDB0185EDB01004403AB /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		477ADDB1185EDB01004403AB /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		477ADDB2185EDB01004403AB /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		477ADDB3185EDB01004403AB /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		477ADDB4185EDB01004403AB /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		477ADDB5185EDB01004403AB /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		477ADDB6185EDB01004403AB /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		477ADDB8185EDB01004403AB /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		477ADDB9185EDB01004403AB /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		477ADDBB185EDB01004403AB /* AnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsViewController.h; sourceTree = "<group>"; };
+		477ADDBC185EDB01004403AB /* AnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsViewController.m; sourceTree = "<group>"; };
 		A052E1731859A586009CB88F /* AnalyticsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyticsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A052E1761859A586009CB88F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A052E1781859A586009CB88F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,8 +72,8 @@
 				A0AEB5CA185AFCBD00D18DD5 /* SystemConfiguration.framework in Frameworks */,
 				A0AEB5C8185AFCAF00D18DD5 /* CoreData.framework in Frameworks */,
 				A0AEB5C6185AFCA600D18DD5 /* libz.dylib in Frameworks */,
-				477ADDA9185ED824004403AB /* libMobClickLibrary.a in Frameworks */,
-				477ADDA8185ED824004403AB /* libGoogleAnalyticsServices.a in Frameworks */,
+				477ADDBF185EDB01004403AB /* libMobClickLibrary.a in Frameworks */,
+				477ADDBE185EDB01004403AB /* libGoogleAnalyticsServices.a in Frameworks */,
 				A052E1791859A586009CB88F /* CoreGraphics.framework in Frameworks */,
 				A052E17B1859A586009CB88F /* UIKit.framework in Frameworks */,
 				A052E1771859A586009CB88F /* Foundation.framework in Frameworks */,
@@ -103,55 +103,55 @@
 			path = AnalyticsSDKDemo;
 			sourceTree = "<group>";
 		};
-		477ADD95185ED824004403AB /* AnalyticsSDK */ = {
+		477ADDAB185EDB01004403AB /* AnalyticsSDK */ = {
 			isa = PBXGroup;
 			children = (
-				477ADD96185ED824004403AB /* AnalyticsSDK.h */,
-				477ADD97185ED824004403AB /* AnalyticsSDK.m */,
-				477ADD98185ED824004403AB /* Connection */,
-				477ADDA4185ED824004403AB /* Extend */,
+				477ADDAC185EDB01004403AB /* AnalyticsSDK.h */,
+				477ADDAD185EDB01004403AB /* AnalyticsSDK.m */,
+				477ADDAE185EDB01004403AB /* Connection */,
+				477ADDBA185EDB01004403AB /* Extend */,
 			);
 			name = AnalyticsSDK;
 			path = ../AnalyticsSDK;
 			sourceTree = "<group>";
 		};
-		477ADD98185ED824004403AB /* Connection */ = {
+		477ADDAE185EDB01004403AB /* Connection */ = {
 			isa = PBXGroup;
 			children = (
-				477ADD99185ED824004403AB /* GoogleAnalytics */,
-				477ADDA1185ED824004403AB /* UMeng */,
+				477ADDAF185EDB01004403AB /* GoogleAnalytics */,
+				477ADDB7185EDB01004403AB /* UMeng */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
 		};
-		477ADD99185ED824004403AB /* GoogleAnalytics */ = {
+		477ADDAF185EDB01004403AB /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				477ADD9A185ED824004403AB /* GAI.h */,
-				477ADD9B185ED824004403AB /* GAIDictionaryBuilder.h */,
-				477ADD9C185ED824004403AB /* GAIFields.h */,
-				477ADD9D185ED824004403AB /* GAILogger.h */,
-				477ADD9E185ED824004403AB /* GAITrackedViewController.h */,
-				477ADD9F185ED824004403AB /* GAITracker.h */,
-				477ADDA0185ED824004403AB /* libGoogleAnalyticsServices.a */,
+				477ADDB0185EDB01004403AB /* GAI.h */,
+				477ADDB1185EDB01004403AB /* GAIDictionaryBuilder.h */,
+				477ADDB2185EDB01004403AB /* GAIFields.h */,
+				477ADDB3185EDB01004403AB /* GAILogger.h */,
+				477ADDB4185EDB01004403AB /* GAITrackedViewController.h */,
+				477ADDB5185EDB01004403AB /* GAITracker.h */,
+				477ADDB6185EDB01004403AB /* libGoogleAnalyticsServices.a */,
 			);
 			path = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
-		477ADDA1185ED824004403AB /* UMeng */ = {
+		477ADDB7185EDB01004403AB /* UMeng */ = {
 			isa = PBXGroup;
 			children = (
-				477ADDA2185ED824004403AB /* libMobClickLibrary.a */,
-				477ADDA3185ED824004403AB /* MobClick.h */,
+				477ADDB8185EDB01004403AB /* libMobClickLibrary.a */,
+				477ADDB9185EDB01004403AB /* MobClick.h */,
 			);
 			path = UMeng;
 			sourceTree = "<group>";
 		};
-		477ADDA4185ED824004403AB /* Extend */ = {
+		477ADDBA185EDB01004403AB /* Extend */ = {
 			isa = PBXGroup;
 			children = (
-				477ADDA5185ED824004403AB /* AnalyticsViewController.h */,
-				477ADDA6185ED824004403AB /* AnalyticsViewController.m */,
+				477ADDBB185EDB01004403AB /* AnalyticsViewController.h */,
+				477ADDBC185EDB01004403AB /* AnalyticsViewController.m */,
 			);
 			path = Extend;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 		A052E16A1859A586009CB88F = {
 			isa = PBXGroup;
 			children = (
-				477ADD95185ED824004403AB /* AnalyticsSDK */,
+				477ADDAB185EDB01004403AB /* AnalyticsSDK */,
 				477ADD7D185ED817004403AB /* AnalyticsSDKDemo */,
 				A052E1751859A586009CB88F /* Frameworks */,
 				A052E1741859A586009CB88F /* Products */,
@@ -257,8 +257,8 @@
 				477ADD93185ED817004403AB /* SecondViewController.m in Sources */,
 				477ADD8D185ED817004403AB /* AppDelegate.m in Sources */,
 				477ADD92185ED817004403AB /* main.m in Sources */,
-				477ADDAA185ED825004403AB /* AnalyticsViewController.m in Sources */,
-				477ADDA7185ED824004403AB /* AnalyticsSDK.m in Sources */,
+				477ADDC0185EDB01004403AB /* AnalyticsViewController.m in Sources */,
+				477ADDBD185EDB01004403AB /* AnalyticsSDK.m in Sources */,
 				477ADD90185ED817004403AB /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,11 +366,8 @@
 				GCC_PREFIX_HEADER = "AnalyticsSDKDemo/AnalyticsSDKDemo-Prefix.pch";
 				INFOPLIST_FILE = "AnalyticsSDKDemo/AnalyticsSDKDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Volumes/Data/Study/OpenSource/GitHub/StatisticsSDK/StatisticsSDK/Connection/GoogleAnalytics,
-					/Volumes/Data/Study/OpenSource/GitHub/StatisticsSDK/StatisticsSDK/Connection/UMeng,
-					/Users/shihaijie/OpenSource/StatisticsSDK/AnalyticsSDK/Connection/GoogleAnalytics,
-					/Users/shihaijie/OpenSource/StatisticsSDK/AnalyticsSDK/Connection/UMeng,
+					/Users/shihaijie/OpenSource/AnalyticsSDK/AnalyticsSDK/Connection/GoogleAnalytics,
+					/Users/shihaijie/OpenSource/AnalyticsSDK/AnalyticsSDK/Connection/UMeng,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -386,11 +383,8 @@
 				GCC_PREFIX_HEADER = "AnalyticsSDKDemo/AnalyticsSDKDemo-Prefix.pch";
 				INFOPLIST_FILE = "AnalyticsSDKDemo/AnalyticsSDKDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Volumes/Data/Study/OpenSource/GitHub/StatisticsSDK/StatisticsSDK/Connection/GoogleAnalytics,
-					/Volumes/Data/Study/OpenSource/GitHub/StatisticsSDK/StatisticsSDK/Connection/UMeng,
-					/Users/shihaijie/OpenSource/StatisticsSDK/AnalyticsSDK/Connection/GoogleAnalytics,
-					/Users/shihaijie/OpenSource/StatisticsSDK/AnalyticsSDK/Connection/UMeng,
+					/Users/shihaijie/OpenSource/AnalyticsSDK/AnalyticsSDK/Connection/GoogleAnalytics,
+					/Users/shihaijie/OpenSource/AnalyticsSDK/AnalyticsSDK/Connection/UMeng,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
