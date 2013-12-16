@@ -20,19 +20,6 @@ Next, import the header file wherever you want to use the tab bar controller:
 #import "AnalyticsSDK.h"
 ```
 
-###Installation(Manual)
-
-*	1, Add AnalyticsSDK folder to you project.
-*	2, Add linked libraries:
-	*	CoreData.framework
-	*	SystemConfiguration.framework
-	*	libz.dylib
-*	3, import the header file wherever you want to use the tab bar controller:
-
-```objc
-#import "AnalyticsSDK.h"
-```
-
 ###Sample Code
 
 
