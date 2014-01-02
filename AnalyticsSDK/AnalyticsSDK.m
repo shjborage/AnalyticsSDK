@@ -169,6 +169,23 @@
 
 #pragma mark - Events
 
++ (void)eventWithAction:(NSString *)action
+{
+  [self eventWithCategory:@"" action:action];
+}
+
++ (void)eventWithAction:(NSString *)action
+                  label:(NSString *)label
+{
+  [self eventWithCategory:@"" action:action label:label];
+}
+
++ (void)eventWithAction:(NSString *)action
+                  value:(id)value
+{
+  [self eventWithCategory:@"" action:action label:@"" value:value];
+}
+
 + (void)eventWithCategory:(NSString *)category
                    action:(NSString *)action
 {

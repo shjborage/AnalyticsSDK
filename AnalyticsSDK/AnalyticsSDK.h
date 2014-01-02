@@ -73,6 +73,13 @@
 /*
  events
  */
++ (void)eventWithAction:(NSString *)action;
++ (void)eventWithAction:(NSString *)action
+                  label:(NSString *)label;
++ (void)eventWithAction:(NSString *)action
+                  value:(id)value;
+
++ (void)eventWithAction:(NSString *)action;
 + (void)eventWithCategory:(NSString *)category
                    action:(NSString *)action;
 + (void)eventWithCategory:(NSString *)category
