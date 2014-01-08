@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'AnalyticsSDK/*.{h,m}', 'AnalyticsSDK/**/*.{h,m}'
 
- s.dependency 'UMeng-Analytics',         '~> 2.2.0'
+ s.dependency 'UMeng-Analytics',         '~> 2.2.1'
  s.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.2'
 end

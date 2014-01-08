@@ -80,6 +80,7 @@
  */
 
 #pragma mark - Connections-Umeng
+#if kEnableUMeng
 // Umeng
 + (void)connectUmengWithAppKey:(NSString *)appKey
 {
@@ -94,8 +95,10 @@
   
   [MobClick startWithAppkey:appKey reportPolicy:rp channelId:cid];
 }
+#endif
 
 #pragma mark - Connections-Google
+#if kEnableGoogle
 // Google
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID
 {
@@ -115,7 +118,7 @@
   id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingID];
   [tracker set:[GAIFields customDimensionForIndex:1] value:cid];
 }
-
+#endif
 /*
  settings
  */
@@ -124,15 +127,16 @@
 // Enable debug log.
 + (void)setLogEnabled:(BOOL)isEnable
 {
-  if ([self isEnableUmeng])
-    [MobClick setLogEnabled:isEnable];
+#if kEnableUMeng
+  [MobClick setLogEnabled:isEnable];
+#endif
   
-  if ([self isEnableGoogle]) {
-    if (isEnable)
-      [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
-    else
-      [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
-  }
+#if kEnableGoogle
+  if (isEnable)
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+  else
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
+#endif
 }
 
 /*
@@ -143,24 +147,25 @@
 
 + (void)beginLogView:(NSString *)viewName
 {
-  if ([self isEnableUmeng])
-    [MobClick beginLogPageView:viewName];
+#if kEnableUMeng
+  [MobClick beginLogPageView:viewName];
+#endif
   
-  if ([self isEnableGoogle]) {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:viewName];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-  }
+#if kEnableGoogle
+  id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+  [tracker set:kGAIScreenName value:viewName];
+  [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+#endif
 }
 
 + (void)endLogView:(NSString *)viewName
 {
-  if ([self isEnableUmeng])
-    [MobClick endLogPageView:viewName];
+#if kEnableUMeng
+  [MobClick endLogPageView:viewName];
+#endif
   
-  if ([self isEnableGoogle]) {
-    ;
-  }
+#if kEnableGoogle
+#endif
 }
 
 /*
@@ -204,21 +209,21 @@
                     label:(NSString *)label
                     value:(id)value
 {
-  if ([self isEnableUmeng]) {
-    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
-    [MobClick event:eventId label:label];
-    if (value)
-      [MobClick event:eventId attributes:@{@"value": value}];
-  }
+#if kEnableUMeng
+  NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
+  [MobClick event:eventId label:label];
+  if (value)
+    [MobClick event:eventId attributes:@{@"value": value}];
+#endif
   
-  if ([self isEnableGoogle]) {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
-                                                          action:action
-                                                           label:label
-                                                           value:value] build]];
-  }
+#if kEnableGoogle
+  id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+  
+  [tracker send:[[GAIDictionaryBuilder createEventWithCategory:category
+                                                        action:action
+                                                         label:label
+                                                         value:value] build]];
+#endif
 }
 
 + (void)eventWithCategory:(NSString *)category
@@ -226,19 +231,19 @@
                     label:(NSString *)label
                      time:(NSTimeInterval)intervalMillis
 {
-  if ([self isEnableUmeng]) {
-    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
-    [MobClick event:eventId label:label durations:(int)intervalMillis];
-  }
+#if kEnableUMeng
+  NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
+  [MobClick event:eventId label:label durations:(int)intervalMillis];
+#endif
   
-  if ([self isEnableGoogle]) {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    
-    [tracker send:[[GAIDictionaryBuilder createTimingWithCategory:category
-                                                         interval:[NSNumber numberWithFloat:intervalMillis]
-                                                             name:action
-                                                            label:label] build]];
-  }
+#if kEnableGoogle
+  id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+  
+  [tracker send:[[GAIDictionaryBuilder createTimingWithCategory:category
+                                                       interval:[NSNumber numberWithFloat:intervalMillis]
+                                                           name:action
+                                                          label:label] build]];
+#endif
 }
 
 @end

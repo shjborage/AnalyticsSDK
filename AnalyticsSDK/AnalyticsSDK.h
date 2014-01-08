@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
+#define kEnableGoogle     0
+#define kEnableUMeng      1
+
 /*
  ###Support:
  ####1. [Umeng](http://dev.umeng.com/analytics/ios/ )
@@ -34,10 +37,16 @@
 
 
 #import <Foundation/Foundation.h>
+
+#if kEnableUMeng
 #import "MobClick.h"
+#endif
+
+#if kEnableGoogle
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
+#endif
 
 @interface AnalyticsSDK : NSObject
 
@@ -45,17 +54,22 @@
  connections
  */
 
+#if kEnableUMeng
 // Umeng
 + (void)connectUmengWithAppKey:(NSString *)appKey;
 + (void)connectUmengWithAppKey:(NSString *)appKey
                   reportPolicy:(ReportPolicy)rp
                      channelID:(NSString *)cid;
+#endif
 
+
+#if kEnableGoogle
 // Google
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID;
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID
                    dispatchInterval:(NSTimeInterval)interval
                           channelId:(NSString *)cid;
+#endif
 
 /*
  settings
