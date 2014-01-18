@@ -7,7 +7,6 @@
 //
 
 #import "AnalyticsViewController.h"
-#import "AnalyticsSDK.h"
 
 @interface AnalyticsViewController ()
 

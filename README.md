@@ -14,6 +14,14 @@ pod 'AnalyticsSDK'
 
 Run `pod install` to install the dependencies.
 
+Or just do this if you don't used CocoaPods before:
+```
+echo "platform :ios, '5.0'" > Podfile
+echo "pod 'UI7Kit'" >> Podfile
+pod install
+open *.xcworkspace
+```
+
 Next, import the header file wherever you want to use the tab bar controller:
 
 ```objc

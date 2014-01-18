@@ -6,8 +6,13 @@
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
-#import "GAITrackedViewController.h"
+#import "AnalyticsSDK.h"
 
+#if kEnableGoogle
+#import "GAITrackedViewController.h"
 @interface AnalyticsViewController : GAITrackedViewController
+#else
+@interface AnalyticsViewController : UIViewController
+#endif
 
 @end
