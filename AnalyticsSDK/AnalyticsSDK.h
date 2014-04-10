@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Saick. All rights reserved.
 //
 
-#define kEnableGoogle     0
-#define kEnableUMeng      1
-
 /*
  ###Support:
  ####1. [Umeng](http://dev.umeng.com/analytics/ios/ )
@@ -22,7 +19,7 @@
  *	2, Default Channel : App Store
  *	3, Default dispatch time interval 20 seconds
  *	4, Default Automatically send uncaught exceptions to Google Analytics
-
+ 
  ###Notice:
  
  *	1, If you connnect one item, and then you remove your connnection, there is an warnning.
@@ -37,16 +34,10 @@
 
 
 #import <Foundation/Foundation.h>
-
-#if kEnableUMeng
 #import "MobClick.h"
-#endif
-
-#if kEnableGoogle
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
-#endif
 
 @interface AnalyticsSDK : NSObject
 
@@ -54,45 +45,34 @@
  connections
  */
 
-#if kEnableUMeng
 // Umeng
 + (void)connectUmengWithAppKey:(NSString *)appKey;
 + (void)connectUmengWithAppKey:(NSString *)appKey
                   reportPolicy:(ReportPolicy)rp
                      channelID:(NSString *)cid;
-#endif
 
-
-#if kEnableGoogle
 // Google
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID;
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID
                    dispatchInterval:(NSTimeInterval)interval
                           channelId:(NSString *)cid;
-#endif
 
-/*
- settings
+/*!
+ @brief settings
  */
 
 // Enable debug log.
 + (void)setLogEnabled:(BOOL)isEnable;
 
-/*
- basic page view
+/*!
+ @brief basic page view
  */
 + (void)beginLogView:(NSString *)viewName;
 + (void)endLogView:(NSString *)viewName;
 
-/*
- events
+/*!
+ @brief events
  */
-+ (void)eventWithAction:(NSString *)action;
-+ (void)eventWithAction:(NSString *)action
-                  label:(NSString *)label;
-+ (void)eventWithAction:(NSString *)action
-                  value:(id)value;
-
 + (void)eventWithAction:(NSString *)action;
 + (void)eventWithCategory:(NSString *)category
                    action:(NSString *)action;
