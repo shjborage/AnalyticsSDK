@@ -22,7 +22,7 @@
  *	2, Default Channel : App Store
  *	3, Default dispatch time interval 20 seconds
  *	4, Default Automatically send uncaught exceptions to Google Analytics
- 
+
  ###Notice:
  
  *	1, If you connnect one item, and then you remove your connnection, there is an warnning.
