@@ -7,7 +7,7 @@
 //
 
 #define kEnableGoogle     0
-#define kEnableUMeng      1
+#define kEnableUMeng      0
 #define kEnableAVOS       1
 
 /*
@@ -87,8 +87,6 @@
 #if kEnableAVOS
 // AVOS
 + (void)connectAvosWithApplicationId:(NSString *)ApplicationId clientKey:(NSString *)key;
-+ (void)connectAvosWithApplicationId:(NSString *)ApplicationId
-                           clientKey:(NSString *)key;
 
 #endif
 

@@ -149,11 +149,6 @@
 {
     [AVOSCloud setApplicationId:ApplicationId clientKey:key];
 }
-+ (void)connectAvosWithApplicationId:(NSString *)ApplicationId
-                           clientKey:(NSString *)key
-{
-    [AVOSCloud setApplicationId:ApplicationId clientKey:key];
-}
 
 #endif
 
@@ -283,8 +278,8 @@
                      time:(NSTimeInterval)intervalMillis
 {
 #if kEnableUMeng
-  NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
-  [MobClick event:eventId label:label durations:(int)intervalMillis];
+  NSString *umeventId = [NSString stringWithFormat:@"%@_%@", category, action];
+  [MobClick event:umeventId label:label durations:(int)intervalMillis];
 #endif
   
 #if kEnableGoogle
@@ -296,8 +291,8 @@
                                                           label:label] build]];
 #endif
 #if kEnableAVOS
-    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
-    [AVAnalytics event:eventId label:label];
+    NSString *aveventId = [NSString stringWithFormat:@"%@_%@", category, action];
+    [AVAnalytics event:aveventId label:label];
 #endif
 }
 
