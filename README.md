@@ -100,6 +100,14 @@ For extend: automatic log view
 *	2, Default Channel : App Store
 *	3, Default dispatch time interval 20 seconds
 *	4, Default Automatically send uncaught exceptions to Google Analytics
+
+#####3.[AVOS](https://cn.avoscloud.com/)
+ 
+ *  1.Default Channel : App Store
+ *  2.Real time
+ *  3.CrashReport
+ *  4.Online channels set
+
  
 ###Notice:
 

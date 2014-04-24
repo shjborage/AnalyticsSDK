@@ -1,2 +1,5 @@
 platform :ios, '5.0'
-pod 'AnalyticsSDK', '~> v0.1'
+
+pod 'UMengAnalytics',         	'~> 2.2.1'
+pod 'GoogleAnalytics-iOS-SDK', 	'~> 3.0.2'
+pod 'AVOSCloud'

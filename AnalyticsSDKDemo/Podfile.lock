@@ -1,0 +1,16 @@
+PODS:
+  - AVOSCloud (2.5.1)
+  - GoogleAnalytics-iOS-SDK (3.0.6)
+  - UMengAnalytics (2.2.1)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - GoogleAnalytics-iOS-SDK (~> 3.0.2)
+  - UMengAnalytics (~> 2.2.1)
+
+SPEC CHECKSUMS:
+  AVOSCloud: c79aac5bba1b59bedf44105380c32d0db074f620
+  GoogleAnalytics-iOS-SDK: 16dfcc0c4491148bf372edc85a8470cc405ffb72
+  UMengAnalytics: ce494e736260640957348d00eb0f41aa02167662
+
+COCOAPODS: 0.32.1

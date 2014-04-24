@@ -19,6 +19,13 @@
  *	2, Default Channel : App Store
  *	3, Default dispatch time interval 20 seconds
  *	4, Default Automatically send uncaught exceptions to Google Analytics
+
+ #####3.[AVOS](https://cn.avoscloud.com/)
+ 
+ *  1.Default Channel : App Store
+ *  2.Real time
+ *  3.CrashReport
+ *  4.Online channels set
  
  ###Notice:
  
@@ -32,12 +39,17 @@
 #define kDefaultChannel                 @"App Store"
 #define kDefaultDispatchTimeInterval    20.0f
 
-
 #import <Foundation/Foundation.h>
-#import "MobClick.h"
-#import "GAI.h"
-#import "GAIFields.h"
-#import "GAIDictionaryBuilder.h"
+
+typedef enum {
+  AS_REALTIME = 0,          //实时发送
+  AS_BATCH = 1,             //启动发送
+  AS_SENDDAILY = 4,         //每日发送
+  AS_SENDWIFIONLY = 5,      //仅在WIFI下启动时发送
+  AS_SEND_INTERVAL = 6,     //按最小间隔发送
+  AS_SEND_ON_EXIT = 7       //退出或进入后台时发送
+} ASReportPolicy;
+
 
 @interface AnalyticsSDK : NSObject
 
@@ -48,7 +60,7 @@
 // Umeng
 + (void)connectUmengWithAppKey:(NSString *)appKey;
 + (void)connectUmengWithAppKey:(NSString *)appKey
-                  reportPolicy:(ReportPolicy)rp
+                  reportPolicy:(ASReportPolicy)rp
                      channelID:(NSString *)cid;
 
 // Google
@@ -56,10 +68,8 @@
 + (void)connectGoogleWithTrackingID:(NSString *)trackingID
                    dispatchInterval:(NSTimeInterval)interval
                           channelId:(NSString *)cid;
-
-/*!
- @brief settings
- */
+// AVOS
++ (void)connectAvosWithApplicationId:(NSString *)ApplicationId clientKey:(NSString *)key;
 
 // Enable debug log.
 + (void)setLogEnabled:(BOOL)isEnable;
