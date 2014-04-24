@@ -8,6 +8,7 @@
 
 #define kEnableGoogle     0
 #define kEnableUMeng      1
+#define kEnableAVOS       1
 
 /*
  ###Support:
@@ -23,6 +24,13 @@
  *	3, Default dispatch time interval 20 seconds
  *	4, Default Automatically send uncaught exceptions to Google Analytics
 
+ #####3.[AVOS](https://cn.avoscloud.com/)
+ 
+ *  1.Default Channel : App Store
+ *  2.Real time
+ *  3.CrashReport
+ *  4.Online channels set
+ 
  ###Notice:
  
  *	1, If you connnect one item, and then you remove your connnection, there is an warnning.
@@ -48,6 +56,10 @@
 #import "GAIDictionaryBuilder.h"
 #endif
 
+#if kEnableAVOS
+#import "AVOSCloud.h"
+#endif
+
 @interface AnalyticsSDK : NSObject
 
 /*
@@ -70,6 +82,17 @@
                    dispatchInterval:(NSTimeInterval)interval
                           channelId:(NSString *)cid;
 #endif
+
+
+#if kEnableAVOS
+// AVOS
++ (void)connectAvosWithApplicationId:(NSString *)ApplicationId clientKey:(NSString *)key;
++ (void)connectAvosWithApplicationId:(NSString *)ApplicationId
+                           clientKey:(NSString *)key;
+
+#endif
+
+
 
 /*
  settings

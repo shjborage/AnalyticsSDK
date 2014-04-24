@@ -11,6 +11,7 @@
 #define kAnalyticsUD         @"Analytics_UDKey"
 #define kAnalyticsUmeng      @"Analytics_Umeng"
 #define kAnalyticsGoogle     @"Analytics_Google"
+#define kAnalyticsAVOS       @"Analytics_AVOS"
 
 #define kIsEnable             @"isEnable"
 
@@ -27,7 +28,8 @@
   NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
   if (![allItems isKindOfClass:[NSDictionary class]]) {
     allItems = @{kAnalyticsUmeng:  @{kIsEnable: @"NO"},
-                 kAnalyticsGoogle: @{kIsEnable: @"NO"}};
+                 kAnalyticsGoogle: @{kIsEnable: @"NO"},
+                 kAnalyticsAVOS: @{kIsEnable: @"NO"}};
     [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kAnalyticsUD];
     [[NSUserDefaults standardUserDefaults] synchronize];
   } // If there is, use it.
@@ -57,6 +59,18 @@
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++ (void)enableAVOS
+{
+    [self initDefaultSettings];
+    NSMutableDictionary *allItems = [NSMutableDictionary dictionaryWithDictionary:
+                                     [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD]];
+    NSMutableDictionary *google = [NSMutableDictionary dictionaryWithDictionary:[allItems objectForKey:kAnalyticsAVOS]];
+    [google setValue:@"YES" forKey:kIsEnable];
+    [allItems setObject:google forKey:kAnalyticsAVOS];
+    [[NSUserDefaults standardUserDefaults] setObject:allItems forKey:kAnalyticsUD];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 + (BOOL)isEnableUmeng
 {
   [self initDefaultSettings];
@@ -69,6 +83,13 @@
   [self initDefaultSettings];
   NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
   return [[[allItems objectForKey:kAnalyticsGoogle] objectForKey:kIsEnable] boolValue];
+}
+
++ (BOOL)isEnableAVOS
+{
+    [self initDefaultSettings];
+    NSDictionary *allItems = [[NSUserDefaults standardUserDefaults] objectForKey:kAnalyticsUD];
+    return [[[allItems objectForKey:kAnalyticsAVOS] objectForKey:kIsEnable] boolValue];
 }
 
 @end
@@ -119,6 +140,23 @@
   [tracker set:[GAIFields customDimensionForIndex:1] value:cid];
 }
 #endif
+
+
+#pragma mark - Connections-AVOS
+#if kEnableAVOS
+
++ (void)connectAvosWithApplicationId:(NSString *)ApplicationId clientKey:(NSString *)key
+{
+    [AVOSCloud setApplicationId:ApplicationId clientKey:key];
+}
++ (void)connectAvosWithApplicationId:(NSString *)ApplicationId
+                           clientKey:(NSString *)key
+{
+    [AVOSCloud setApplicationId:ApplicationId clientKey:key];
+}
+
+#endif
+
 /*
  settings
  */
@@ -136,6 +174,10 @@
     [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
   else
     [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
+#endif
+    
+#if kEnableAVOS
+    [AVAnalytics setLogEnabled:isEnable];
 #endif
 }
 
@@ -156,6 +198,11 @@
   [tracker set:kGAIScreenName value:viewName];
   [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 #endif
+    
+#if kEnableAVOS
+    [AVAnalytics beginLogPageView:viewName];
+#endif
+    
 }
 
 + (void)endLogView:(NSString *)viewName
@@ -165,6 +212,10 @@
 #endif
   
 #if kEnableGoogle
+#endif
+    
+#if kEnableAVOS
+    [AVAnalytics endLogPageView:viewName];
 #endif
 }
 
@@ -243,6 +294,10 @@
                                                        interval:[NSNumber numberWithFloat:intervalMillis]
                                                            name:action
                                                           label:label] build]];
+#endif
+#if kEnableAVOS
+    NSString *eventId = [NSString stringWithFormat:@"%@_%@", category, action];
+    [AVAnalytics event:eventId label:label];
 #endif
 }
 
