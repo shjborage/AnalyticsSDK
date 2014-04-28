@@ -3,6 +3,25 @@ AnalyticsSDK
 
 To be a full statistics SDK for all iOS statistics tools. For example, UMeng, 百度统计,  Google Analytics
 
+###Support:
+####1. [Umeng](http://dev.umeng.com/analytics/ios/ )
+
+*	1, Default Channel : App Store
+ 
+####2. [GoogleAnalytics](http://developers.google.com/analytics/devguides/collection/ios/v3/ )
+
+*	1, Not support multi trackers
+*	2, Default Channel : App Store
+*	3, Default dispatch time interval 20 seconds
+*	4, Default Automatically send uncaught exceptions to Google Analytics
+
+#####3. [AVOS](https://cn.avoscloud.com/)
+ 
+ *  1.Default Channel : App Store
+ *  2.Real time
+ *  3.CrashReport
+ *  4.Online channels set
+
 ###Installation(CocoaPods)
 Add the dependency to your `Podfile`:
 
@@ -88,25 +107,6 @@ For extend: automatic log view
   [AnalyticsSDK eventWithCategory:@"First" action:@"Button" label:@"Pressed" time:1000];
 }
 ```
-
-###Support:
-####1. [Umeng](http://dev.umeng.com/analytics/ios/ )
-
-*	1, Default Channel : App Store
- 
-####2. [GoogleAnalytics](http://developers.google.com/analytics/devguides/collection/ios/v3/ )
-
-*	1, Not support multi trackers
-*	2, Default Channel : App Store
-*	3, Default dispatch time interval 20 seconds
-*	4, Default Automatically send uncaught exceptions to Google Analytics
-
-#####3.[AVOS](https://cn.avoscloud.com/)
- 
- *  1.Default Channel : App Store
- *  2.Real time
- *  3.CrashReport
- *  4.Online channels set
 
  
 ###Notice:
