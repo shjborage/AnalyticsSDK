@@ -166,13 +166,10 @@
     else
       [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
   }
-  if (isEnable)
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
-  else
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
   
-  
-  [AVAnalytics setLogEnabled:isEnable];
+  if ([self isEnableAVOS]) {
+    [AVAnalytics setLogEnabled:isEnable];
+  }
 }
 
 /*
