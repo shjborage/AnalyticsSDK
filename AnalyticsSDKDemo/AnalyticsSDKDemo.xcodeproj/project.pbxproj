@@ -17,6 +17,9 @@
 		477ADD94185ED817004403AB /* AnalyticsSDKDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 477ADD8B185ED817004403AB /* AnalyticsSDKDemo-Info.plist */; };
 		477ADDBD185EDB01004403AB /* AnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADDAD185EDB01004403AB /* AnalyticsSDK.m */; };
 		477ADDC0185EDB01004403AB /* AnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADDBC185EDB01004403AB /* AnalyticsViewController.m */; };
+		479F0F021918C3A000E38556 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1981859A586009CB88F /* XCTest.framework */; };
+		479F0F081918C3A000E38556 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 479F0F061918C3A000E38556 /* InfoPlist.strings */; };
+		479F0F0A1918C3A000E38556 /* AnalyticsSDKDemo_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 479F0F091918C3A000E38556 /* AnalyticsSDKDemo_Tests.m */; };
 		A052E1771859A586009CB88F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1761859A586009CB88F /* Foundation.framework */; };
 		A052E1791859A586009CB88F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E1781859A586009CB88F /* CoreGraphics.framework */; };
 		A052E17B1859A586009CB88F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A052E17A1859A586009CB88F /* UIKit.framework */; };
@@ -25,6 +28,16 @@
 		A0AEB5CA185AFCBD00D18DD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AEB5C9185AFCBD00D18DD5 /* SystemConfiguration.framework */; };
 		C48584C792484E7A95F4FBC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D112D0FCA535452FB7CDE8AB /* libPods.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		479F0F0C1918C3A000E38556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A052E16B1859A586009CB88F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A052E1721859A586009CB88F;
+			remoteInfo = AnalyticsSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		477ADD7E185ED817004403AB /* AnalyticsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsHeader.h; sourceTree = "<group>"; };
@@ -44,6 +57,11 @@
 		477ADDAD185EDB01004403AB /* AnalyticsSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsSDK.m; sourceTree = "<group>"; };
 		477ADDBB185EDB01004403AB /* AnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsViewController.h; sourceTree = "<group>"; };
 		477ADDBC185EDB01004403AB /* AnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsViewController.m; sourceTree = "<group>"; };
+		479F0F011918C3A000E38556 /* AnalyticsSDKDemo Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnalyticsSDKDemo Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		479F0F051918C3A000E38556 /* AnalyticsSDKDemo Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnalyticsSDKDemo Tests-Info.plist"; sourceTree = "<group>"; };
+		479F0F071918C3A000E38556 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		479F0F091918C3A000E38556 /* AnalyticsSDKDemo_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalyticsSDKDemo_Tests.m; sourceTree = "<group>"; };
+		479F0F0B1918C3A000E38556 /* AnalyticsSDKDemo Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnalyticsSDKDemo Tests-Prefix.pch"; sourceTree = "<group>"; };
 		4955F5ACC4814CABB0A1E657 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A052E1731859A586009CB88F /* AnalyticsSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnalyticsSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A052E1761859A586009CB88F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +75,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		479F0EFE1918C3A000E38556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479F0F021918C3A000E38556 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A052E1701859A586009CB88F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,11 +140,31 @@
 			path = Extend;
 			sourceTree = "<group>";
 		};
+		479F0F031918C3A000E38556 /* AnalyticsSDKDemo Tests */ = {
+			isa = PBXGroup;
+			children = (
+				479F0F091918C3A000E38556 /* AnalyticsSDKDemo_Tests.m */,
+				479F0F041918C3A000E38556 /* Supporting Files */,
+			);
+			path = "AnalyticsSDKDemo Tests";
+			sourceTree = "<group>";
+		};
+		479F0F041918C3A000E38556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				479F0F051918C3A000E38556 /* AnalyticsSDKDemo Tests-Info.plist */,
+				479F0F061918C3A000E38556 /* InfoPlist.strings */,
+				479F0F0B1918C3A000E38556 /* AnalyticsSDKDemo Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A052E16A1859A586009CB88F = {
 			isa = PBXGroup;
 			children = (
 				477ADDAB185EDB01004403AB /* AnalyticsSDK */,
 				477ADD7D185ED817004403AB /* AnalyticsSDKDemo */,
+				479F0F031918C3A000E38556 /* AnalyticsSDKDemo Tests */,
 				A052E1751859A586009CB88F /* Frameworks */,
 				A052E1741859A586009CB88F /* Products */,
 				4955F5ACC4814CABB0A1E657 /* Pods.xcconfig */,
@@ -129,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A052E1731859A586009CB88F /* AnalyticsSDKDemo.app */,
+				479F0F011918C3A000E38556 /* AnalyticsSDKDemo Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +198,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		479F0F001918C3A000E38556 /* AnalyticsSDKDemo Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 479F0F101918C3A100E38556 /* Build configuration list for PBXNativeTarget "AnalyticsSDKDemo Tests" */;
+			buildPhases = (
+				479F0EFD1918C3A000E38556 /* Sources */,
+				479F0EFE1918C3A000E38556 /* Frameworks */,
+				479F0EFF1918C3A000E38556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479F0F0D1918C3A000E38556 /* PBXTargetDependency */,
+			);
+			name = "AnalyticsSDKDemo Tests";
+			productName = "AnalyticsSDKDemo Tests";
+			productReference = 479F0F011918C3A000E38556 /* AnalyticsSDKDemo Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A052E1721859A586009CB88F /* AnalyticsSDKDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A052E1A81859A586009CB88F /* Build configuration list for PBXNativeTarget "AnalyticsSDKDemo" */;
@@ -178,6 +243,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Saick;
+				TargetAttributes = {
+					479F0F001918C3A000E38556 = {
+						TestTargetID = A052E1721859A586009CB88F;
+					};
+				};
 			};
 			buildConfigurationList = A052E16E1859A586009CB88F /* Build configuration list for PBXProject "AnalyticsSDKDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -193,11 +263,20 @@
 			projectRoot = "";
 			targets = (
 				A052E1721859A586009CB88F /* AnalyticsSDKDemo */,
+				479F0F001918C3A000E38556 /* AnalyticsSDKDemo Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		479F0EFF1918C3A000E38556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479F0F081918C3A000E38556 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A052E1711859A586009CB88F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +324,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		479F0EFD1918C3A000E38556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479F0F0A1918C3A000E38556 /* AnalyticsSDKDemo_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A052E16F1859A586009CB88F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +346,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		479F0F0D1918C3A000E38556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A052E1721859A586009CB88F /* AnalyticsSDKDemo */;
+			targetProxy = 479F0F0C1918C3A000E38556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		477ADD81185ED817004403AB /* Main.storyboard */ = {
@@ -277,9 +372,64 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		479F0F061918C3A000E38556 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				479F0F071918C3A000E38556 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		479F0F0E1918C3A000E38556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnalyticsSDKDemo.app/AnalyticsSDKDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnalyticsSDKDemo Tests/AnalyticsSDKDemo Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "AnalyticsSDKDemo Tests/AnalyticsSDKDemo Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		479F0F0F1918C3A000E38556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnalyticsSDKDemo.app/AnalyticsSDKDemo";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnalyticsSDKDemo Tests/AnalyticsSDKDemo Tests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "AnalyticsSDKDemo Tests/AnalyticsSDKDemo Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		A052E1A61859A586009CB88F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +541,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		479F0F101918C3A100E38556 /* Build configuration list for PBXNativeTarget "AnalyticsSDKDemo Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				479F0F0E1918C3A000E38556 /* Debug */,
+				479F0F0F1918C3A000E38556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A052E16E1859A586009CB88F /* Build configuration list for PBXProject "AnalyticsSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
