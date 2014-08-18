@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4778592419A1AC2000677449 /* DebugUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4778592319A1AC2000677449 /* DebugUtil.m */; };
 		477ADD8D185ED817004403AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 477ADD80185ED817004403AB /* AppDelegate.m */; };
 		477ADD8E185ED817004403AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477ADD81185ED817004403AB /* Main.storyboard */; };
 		477ADD8F185ED817004403AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 477ADD83185ED817004403AB /* InfoPlist.strings */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4778592219A1AC2000677449 /* DebugUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUtil.h; sourceTree = "<group>"; };
+		4778592319A1AC2000677449 /* DebugUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUtil.m; sourceTree = "<group>"; };
 		477ADD7E185ED817004403AB /* AnalyticsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsHeader.h; sourceTree = "<group>"; };
 		477ADD7F185ED817004403AB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		477ADD80185ED817004403AB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4778592119A1AC2000677449 /* DebugUtil */ = {
+			isa = PBXGroup;
+			children = (
+				4778592219A1AC2000677449 /* DebugUtil.h */,
+				4778592319A1AC2000677449 /* DebugUtil.m */,
+			);
+			name = DebugUtil;
+			path = AnalyticsSDKDemo/DebugUtil;
+			sourceTree = "<group>";
+		};
 		477ADD7D185ED817004403AB /* AnalyticsSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 			children = (
 				477ADDAB185EDB01004403AB /* AnalyticsSDK */,
 				477ADD7D185ED817004403AB /* AnalyticsSDKDemo */,
+				4778592119A1AC2000677449 /* DebugUtil */,
 				479F0F031918C3A000E38556 /* AnalyticsSDKDemo Tests */,
 				A052E1751859A586009CB88F /* Frameworks */,
 				A052E1741859A586009CB88F /* Products */,
@@ -338,6 +352,7 @@
 			files = (
 				477ADD93185ED817004403AB /* SecondViewController.m in Sources */,
 				477ADD8D185ED817004403AB /* AppDelegate.m in Sources */,
+				4778592419A1AC2000677449 /* DebugUtil.m in Sources */,
 				477ADD92185ED817004403AB /* main.m in Sources */,
 				477ADDC0185EDB01004403AB /* AnalyticsViewController.m in Sources */,
 				477ADDBD185EDB01004403AB /* AnalyticsSDK.m in Sources */,
@@ -548,6 +563,7 @@
 				479F0F0F1918C3A000E38556 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A052E16E1859A586009CB88F /* Build configuration list for PBXProject "AnalyticsSDKDemo" */ = {
 			isa = XCConfigurationList;

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AnalyticsHeader.h"
+#import "DebugUtil.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,9 @@
 {
   // Override point for customization after application launch.
   [self initStatisticsSDK];
+  
+  // 测试异常捕获
+  [[DebugUtil sharedDebug] startLog];
   
   return YES;
 }
@@ -47,6 +51,11 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
   // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+  
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    NSArray *arr = [NSArray new];
+    arr[0];
+  });
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
